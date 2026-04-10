@@ -18,7 +18,7 @@ const badgeConfig = computed(() => {
 <template>
   <RouterLink :to="`/bar/${bar.id}`" :class="`bar-card ${cardType}`">
     <div class="img-box">
-      <img :src="`images/barListCard${bar.id}.png`" :alt="bar.name" />
+      <img :src="`/images/barListCard${bar.id}.png`" :alt="bar.name" />
       <div v-if="badgeConfig" :class="`badge ${badgeConfig.className}`">
         {{ badgeConfig.text }}
       </div>

@@ -110,10 +110,10 @@ const onPick = (key) => { tab.value = key }
         </h1>
       </div>
       <div class="heroRightTop">
-        <img src="images/man-is-pouring-strong-alcohol-drink-into-glass.jpg" alt="酒吧吧台與酒杯" />
+        <img src="/images/man-is-pouring-strong-alcohol-drink-into-glass.jpg" alt="酒吧吧台與酒杯" />
       </div>
       <div class="heroLeftBottom">
-        <img src="images/half-lime-with-cocktail-drink-garnish-with-cocktail-white-desk.jpg" alt="酒吧吧台與酒杯" />
+        <img src="/images/half-lime-with-cocktail-drink-garnish-with-cocktail-white-desk.jpg" alt="酒吧吧台與酒杯" />
       </div>
       <div class="heroRightBottom">
         <p class="slogan">「從經典到創新，打開<span class="Bartending">調酒</span>的全景視野」</p>
@@ -176,21 +176,21 @@ const onPick = (key) => { tab.value = key }
       <h2 class="routeTitle">酒精路跑路線</h2>
       <div class="routeCards">
         <a class="routeCard1" href="#">
-          <img src="images/route1.jpg" alt="" />
+          <img src="/images/route1.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 1</span>
             <h3 class="title">善導寺微醺漫步</h3>
           </div>
         </a>
         <a class="routeCard2" href="#">
-          <img src="images/route2.jpg" alt="" />
+          <img src="/images/route2.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 2</span>
             <h3 class="title">中山站醉意市集</h3>
           </div>
         </a>
         <a class="routeCard3" href="#">
-          <img src="images/route3.jpg" alt="" />
+          <img src="/images/route3.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 3</span>
             <h3 class="title">信義奢華浪漫之旅</h3>
@@ -202,7 +202,7 @@ const onPick = (key) => { tab.value = key }
     <!-- 酒精圖鑑 -->
     <section class="Illustrations">
       <div class="leftImg">
-        <img src="images/glass.png" alt="酒杯裝飾" />
+        <img src="/images/glass.png" alt="酒杯裝飾" />
       </div>
 
       <div class="Illustrations-nav">

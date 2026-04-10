@@ -12,7 +12,7 @@ import '../scss/About.scss'
         </div>
         <div class="Ian_boutBox">
           <div class="Ian_bout">
-            <img src="images/bout.png" alt="" />
+            <img src="/images/bout.png" alt="" />
           </div>
         </div>
         <div class="Ian_aboutText1Box">
@@ -26,7 +26,7 @@ import '../scss/About.scss'
           <p>就能替今天收個尾。</p><br />
         </div>
         <div class="Ian_us">
-          <img src="images/us.png" alt="" />
+          <img src="/images/us.png" alt="" />
         </div>
       </div>
     </div>
@@ -58,11 +58,11 @@ import '../scss/About.scss'
     </div>
     <div class="Ian_storyPhotoPart">
       <div class="Ian_storyPhoto">
-        <img src="images/about1.png" alt="" />
-        <img src="images/about2.png" alt="" />
-        <img src="images/about3.png" alt="" />
-        <img src="images/about4.png" alt="" />
-        <img src="images/about5.png" alt="" />
+        <img src="/images/about1.png" alt="" />
+        <img src="/images/about2.png" alt="" />
+        <img src="/images/about3.png" alt="" />
+        <img src="/images/about4.png" alt="" />
+        <img src="/images/about5.png" alt="" />
       </div>
       <div class="Ian_storyText2">
         <p>但我們明白，酒吧與調酒從來不只是飲品，它們是夜色的一部分，</p>

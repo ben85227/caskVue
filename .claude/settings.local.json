@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(grep -v \"//\")",
+      "Bash(sed -i 's|src=\"images/|src=\"/images/|g' /c/Users/User/Desktop/前端/project/caskVue/src/views/Home.vue /c/Users/User/Desktop/前端/project/caskVue/src/views/About.vue)",
+      "Bash(sed -i 's|`images/barListCard|`/images/barListCard|g' /c/Users/User/Desktop/前端/project/caskVue/src/components/BarCard.vue)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
