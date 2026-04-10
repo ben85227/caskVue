@@ -1,0 +1,494 @@
+@use './reset' as *;
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&family=Noto+Sans+TC:wght@200..900&family=Yeseva+One&display=swap');
+:root {
+  --hero-h: 420px;
+  /* 你的 Hero 高度；和 .w_hero_full 的 min-height 對齊 */
+  --toc-panel: 250px;
+  --toc-r: 150px;
+}
+
+.w_illusAll {
+  overflow-x: clip;
+}
+
+/* ========= Full-bleed HERO ========= */
+.w_hero_full {
+  position: relative;
+  width: 100%;
+  min-height: var(--hero-h);
+  background-image: url(/images/hero-drink.png);
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  margin-top: 55px; /* 與導航高度一致，避免貼齊 */
+}
+
+/* 暗色遮罩（讓文字可讀） */
+.w_hero_mask {
+  position: absolute;
+  inset: 0;
+  /* 超輕的遮罩：左邊一點點，右側不蓋 */
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, .18) 0%,
+      rgba(0, 0, 0, .12) 40%,
+      rgba(0, 0, 0, .06) 65%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+}
+
+/* 內容容器：左右兩塊 + 中線 + 直式標題 */
+.w_hero_inner {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0;
+  padding: 0 60px 36px; /* 上緣貼齊 Hero（齊 w_hero_mask），保留左右與下方內距 */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 左：面板 / 中：標題 / 右：空白 */
+  align-items: center;
+  gap: 24px;
+  min-height: var(--hero-h); /* 讓左側面板可與整個 HERO 垂直對齊 */
+}
+
+/* 左側推薦卡 */
+/* 毛玻璃推薦卡（360×400，左右邊距 40） */
+.w_hero_panel {
+  font-family: Noto Serif TC, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  width: 360px;
+  height: 400px;
+  padding: 24px 40px;
+  color: #fff;
+
+  background: rgba(115, 115, 115, .3);
+  /* #737373, 透明度 50% */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  /* border: 1px solid rgba(255,255,255,.25);  <-- 拿掉這個 */
+
+  /* 陰影會在下面加 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 3.5px 3.5px rgba(0, 0, 0, 0.25);
+}
+
+/* 字級可維持你現在設定；這裡給稍微輕一點的對比 */
+.w_hero_panel h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.w_hero_panel h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.w_hero_panel h2 span {
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 8px;
+  color: #f3f3f3;
+}
+
+.w_hero_panel p {
+  margin: 0;
+  color: #f1f1f1;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+}
+
+/* 手機：縮小卡片避免擋畫面 */
+@media (max-width: 900px) {
+  .w_hero_panel {
+    width: 92%;
+    height: auto;
+    padding: 16px 20px;
+    border-radius: 10px;
+    background: rgba(20, 20, 20, .50);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  .w_hero_panel h2 {
+    font-size: 26px;
+  }
+
+  .w_hero_panel h3 {
+    font-size: 18px;
+  }
+}
+
+/* Hero 中央直線（改為三欄後不再需要） */
+.w_hero_divider { display: none; }
+
+/* 中間欄與右側空白欄 */
+.w_hero_center { display: flex; align-items: center; justify-content: center; height: 100%; position: relative; }
+.w_hero_center::before,
+.w_hero_center::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50px; /* 短線長度，可調 */
+  background: rgba(255,255,255,.75);
+  margin-top: 35px;
+}
+.w_hero_center::before { top: -36px; }
+.w_hero_center::after  { bottom: -36px; }
+.w_hero_spacer { height: 100%; }
+
+
+
+/* Hero 直式大字 */
+.w_hero_vtitle {
+  position: static;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: Noto Serif TC, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  /* 依設計調整 */
+  letter-spacing: 4px;
+  color: #fff;
+  z-index: 10; /* 確保不被任何裝飾或圖片遮擋 */
+  /* 確保在分隔線上方 */
+  white-space: nowrap;
+  word-break: keep-all;
+  margin-top: 40px;
+}
+
+/* RWD：堆疊顯示 */
+@media (max-width: 900px) {
+  .w_hero_inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    min-height: var(--hero-h); /* 讓絕對置中的標題以整個 HERO 高度為基準 */
+    padding: 24px 16px; /* 手機版較小內距 */
+  }
+
+  .w_hero_center { justify-content: center; }
+  .w_hero_center::before,
+  .w_hero_center::after { display: none; }
+
+  .w_hero_vtitle {
+    writing-mode: horizontal-tb;
+    letter-spacing: 3px;
+    font-size: 72px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  /* RWD：當外框不再顯示時，整塊推薦面板隱藏 */
+  .w_hero_panel { display: none; }
+}
+
+.w_illustrations {
+  padding-left: calc(var(--toc-panel, 250px) + 20px);
+  padding-block: 24px;
+}
+
+.w_illustrations.is-searching { padding-left: 20px; }
+
+.w_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0px;
+  overflow-x: clip;
+  position: relative;
+}
+
+section + section .w_section_title {
+  margin-top: 50px;  /* 與標題下方到卡片的距離統一 */
+}
+
+/* 整組靠右，並預留左側 TOC 空間 */
+.w_section_title{
+  display:flex;
+  justify-content:flex-end; /* 整體靠右 */
+  // margin-left:240px;
+  margin-bottom:150px; /* 拉開與下方卡片的距離 */
+}
+@media (max-width:1300px){
+  .w_section_title{ margin-left:0; justify-content:center; }
+}
+
+/* 包裹層固定大小＝黑色長方形尺寸 */
+.w_section_wrap{
+  position:relative;
+  width:1195px;
+  height:126px; /* 提高黑色框框高度 */
+}
+
+/* 視窗寬度超過容器時，讓黑色標題區右邊延伸到視窗邊，不改變左側位置 */
+@media (min-width: 1200px){
+  .w_section_wrap{ margin-right: calc(50% - 50vw); }
+  .w_section_bar{ left: 0; right: 0; }
+}
+
+/* 黑色長方形本體 */
+.w_section_bar{
+  position:absolute; inset:0;           /* 填滿包裹層 */
+  background:$pri-dark; color:$pri-white;
+  
+  display:flex;                         /* 與中英文同排 */
+  flex-direction: row;
+  justify-content:flex-start;           /* 從左側開始排 */
+  align-items: baseline;                /* 英文小標與中文小標齊底線 */
+  gap: 24px;                            /* 加大中英文間距 */
+  padding-left:150px;                   /* 給數字預留空間 */
+  padding-top: 50px;
+  box-sizing:border-box;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+/* 橘色數字：以黑條的 top 為基準，往下壓 50% => 垂直吃一半 */
+.w_section_idx{
+  position:absolute;
+  left:24px;       /* 調整你要的水平位置 */
+  top:0;           /* 對齊黑條上邊 */
+  transform:translateY(-50%);
+  font-size:96px;
+  font-weight:900;
+  line-height:1;
+  color:var(--brand, $sec-peggy);
+  font-family: Noto Serif TC, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  z-index:2;       /* 蓋在黑條上 */
+
+}
+
+/* 內文樣式 */
+.w_section_zh{
+  font-family: Noto Serif TC, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  margin: 0; /* reset for heading */
+  font-weight:800;
+  font-size:36px;
+  letter-spacing:.3px;
+  color:#fff;
+  line-height: 1.1;
+}
+.w_section_en{
+  font-family: Noto Serif TC, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  margin: 0; /* reset for heading */
+  color:$sec-pink;
+  font-weight:600;
+  font-size:20px;
+  letter-spacing:.6px;
+  line-height: 1.1;
+  transform: translateY(2px); /* 視覺微調，讓底線更齊 */
+}
+
+.w_search_wrap{ display:flex; justify-content:flex-end; align-items:center; gap:16px; padding: 12px 20px 0; width:100%; }
+.w_search_tabs{ display:none; gap:12px; }
+.w_search_tabs .w_tab{ background:transparent; border:0; color:#9aa0a6; font-weight:700; cursor:pointer; padding:6px 8px; font-size:16px; }
+.w_search_tabs .w_tab:hover{ color:#111; }
+.w_search_results{ margin-top: 80px; } /* 搜尋結果區塊整體下移 */
+.w_search_empty{ min-height: 60vh; display:flex; align-items:flex-start; padding-top: 4vh; }
+.barSearch {
+  width: 240px;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #AFAFAF;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    opacity: .9;
+  }
+
+  input {
+    background: transparent;
+    border: 0;
+    color: #AFAFAF;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-left: 10px;
+  }
+
+  input::placeholder {
+    color: #D0D0D0;
+    letter-spacing: .02em;
+  }
+}
+
+/* 卡片 Grid */
+.w_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center; /* 換行時置中排列，避免左右不齊 */
+  margin-left: -30px; /* 整體往左位移 */
+  /* 控制圖片大小（桌機預設更大） */
+  /* 先保留數值，不使用額外變數抽離 */
+  --img-w: 400px;
+  --img-h: 260px;
+}
+
+/* 卡片樣式 */
+.w_card { 
+  // background: $pri-white;
+  border-radius: 0;
+  // box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  padding-bottom: 90px; /* 為絕對定位的白框預留空間 */
+  // transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 358px; /* 鎖定卡片高度，避免換行或兄弟元素因合成層重排而跳動 */
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  isolation: isolate; /* 卡片建立獨立圖層，避免互相影響 */
+}
+
+/* 三欄：每張卡固定寬度（包含左右留白）以達成 3 欄排布 */
+.w_cards .w_card{ flex: 0 0 360px; }
+
+// w_card_visual{
+//   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+// }
+
+.w_card_visual { position: relative; min-height: 205px; }
+.w_card_frame{
+  position: relative;
+  width:236px;
+  height:268px;
+  transition: box-shadow .22s cubic-bezier(.2,0,.2,1), transform .22s cubic-bezier(.2,0,.2,1);
+  backface-visibility: hidden;
+  z-index: 0;
+}
+.w_card_frame:hover{ box-shadow: 0 6px 20px rgba(0,0,0,.12); transform: translate3d(0,-2px,0); }
+/* 防止 frame 內部絕對定位元素超出造成水平捲動 */
+.w_card_frame{ overflow: visible; }
+/* 粉框（設計尺寸） */
+.w_card_bg { position:absolute; top:0; left:0; width:236px; height:205px; background:#f3eee9; box-shadow: inset 0 1px 0 rgba(0,0,0,0); z-index: 0; }
+/* 圖片（設計尺寸），上移一半高度以「伸出」卡片 */
+.w_card_img {
+  position: absolute;
+  width: var(--img-w);
+  height: var(--img-h);
+  top: calc(var(--img-h) / -2 + 35px);
+  object-fit: contain;
+  pointer-events: none; /* 還原為不攔截 hover，效果回到 frame 上 */
+  transition: transform .22s cubic-bezier(.2,0,.2,1);
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0.001px);
+  z-index: 1;
+}
+
+/* 由 .is-left / .is-right 控制左右，取消舊的 nth-child 排列 */
+.w_cards > .w_card .w_card_frame { margin-left: 0; margin-right: 0; }
+
+/* 讓圖片大部分覆蓋在粉框上：依粉框中心做 53px（(342-236)/2）修正 */
+.w_card.is-left .w_card_frame{ position: relative; margin-left:33px; margin-right:auto; }
+.w_card.is-right .w_card_frame{ position: relative; margin-left:auto; margin-right:35px; }
+
+/* 左版：以粉框寬 236px 為基準，讓圖片中心對齊粉框中心（回內一點） */
+.w_card.is-left .w_card_img{ left: calc(33px - ((var(--img-w) - 236px) / 2) + 25px); right:auto; }
+/* 右版：同理回內一點 */
+.w_card.is-right .w_card_img{ right: calc(35px - ((var(--img-w) - 236px) / 2) + 25px); left:auto; }
+
+.w_img_placeholder {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: #e8e8e8;
+}
+
+.w_card_meta {
+  position: absolute;
+  bottom: 0;               /* 黏在 frame 底部 */
+  left: 0;                 /* 與粉框同 X */
+  width:236px;
+  height:63px;             /* 白框尺寸 */
+  background:#fff;         /* 白框底色 */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;  /* 文字置中對齊白框高度 */
+  gap:2px;
+  padding: 12px 14px 16px;
+  z-index: 2;
+}
+
+/* 白框改由 .w_card_frame 控制定位，這裡不再偏移 */
+
+.w_card_name {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 2.4px;
+}
+
+.w_card_en {
+  color: $sec-gray;
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: .8px;
+}
+
+/* highlight style */
+.w_card mark{ background: transparent; color:$sec-peggy; padding: 0; }
+
+// .w_card:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.10); }
+/* 圖片不再位移，由 frame 整體上移，避免圖像重採樣抖動 */
+.w_card_frame:hover .w_card_img{ transform: translateZ(0.001px); }
+
+/* Bookmark button */
+/* 收藏功能移除：保留空白區段避免樣式誤觸 */
+
+/* RWD：畫面變小改為兩欄、一欄，並維持左右交錯規則 */
+@media (max-width: 1200px) {
+  .w_cards .w_card{ flex: 0 0 360px; }
+}
+
+@media (max-width: 780px) {
+  /* 單欄版：卡片佔滿一列，置中顯示 */
+  .w_cards .w_card{ flex: 0 0 100%; }
+  /* 單欄版：取消左右版型差異，整組置中 */
+  .w_card.is-left .w_card_frame,
+  .w_card.is-right .w_card_frame{ margin-left: auto; margin-right: auto; }
+  /* 單欄版：杯圖縮小，置於粉框內部中央 */
+  .w_card.is-left .w_card_img,
+  .w_card.is-right .w_card_img{
+    left: 50%; right: auto; transform: translateX(-50%);
+    top: -45px; width:300px; height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .w_illustrations {
+    padding-left: 0;
+  }
+}
+
+/* 當左側導覽在 1024px 關閉時，同步移除內容區讓位 */
+@media (max-width: 1024px) {
+  .w_illustrations { padding-left: 0; }
+  /* 讓搜尋列（含章節 tabs）靠左、與搜尋框同行，並固定在 nav 下方 */
+  .w_search_wrap{
+    justify-content: space-between;
+    background: $pri-white;
+    position: sticky;
+    top: 55px; /* 再下移，避免過於貼近上緣與橘色數字重疊 */
+    z-index: 15;
+    padding: 10px 20px;
+    margin-bottom: 12px; /* 與下方內容留白，避免視覺貼齊 */
+  }
+  .w_search_tabs{ display:flex; }
+}

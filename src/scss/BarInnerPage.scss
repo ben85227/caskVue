@@ -1,0 +1,387 @@
+@use 'reset' as *;
+@use "variables" as *;
+
+// BarInnerPage.scss
+.BI_bar-inner {
+    width: 100%;
+    min-height: 100vh;
+    background: $pri-white;
+    margin: 56px auto;
+    background-image: url(../images/drop_dark.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 191px 116px;
+
+    @media ($mediaMd) {
+        margin: 59px auto;
+    }
+
+
+    // 主要英雄區域
+    .BI_hero-section {
+        width: 100%;
+        max-width: 1440px;
+        // margin: 0 auto;
+        padding: 70px 0;
+
+        .BI_content-wrapper {
+            display: flex;
+            gap: 0;
+            height: 600px;
+            position: relative;
+
+            @media ($mediaMd) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            // 左側資訊面板
+            .BI_info-panel {
+                background: $pri-dark;
+                color: $pri-white;
+                padding: 60px 50px;
+                margin-left: clamp(50px,calc(17.86vw - 192.86px),150px);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                position: relative;
+                width: 700px;
+                height: 950px;
+                z-index: 0;
+                flex-shrink: 0;
+
+                @media ($mediaMd) {
+                    width: 80vw;
+                    height: 500px;
+                    order: 2;
+                }
+
+
+                .BI_bar-name {
+                    font-size: 56px;
+                    font-weight: bold;
+                    margin: 30px 0 80px;
+                    line-height: 1.2;
+                    letter-spacing: 2px;
+
+                    @media ($mediaMd) {
+                        font-size: 28px;
+                        margin: 20px 0 40px;
+                    }
+
+                }
+
+                .BI_bar-details {
+                    margin-bottom: 80px;
+                    font-size: 20px;
+
+                    @media ($mediaMd) {
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+
+
+                    .BI_detail-item {
+                        display: flex;
+                        margin-bottom: 15px;
+                        
+
+                        .BI_label {
+                            color: $pri-white;
+                            min-width: 100px;
+                        }
+
+                        .BI_value {
+                            color: $pri-white;
+                            flex: 1;
+                        }
+                    }
+                }
+
+                .BI_description {
+                    padding-right: 230px;
+                    @media ($mediaMd) {
+                    padding: 0;
+                }
+
+
+                    p {
+                        font-size: 20px;
+                        line-height: 1.8;
+                        color: $pri-white;
+                        letter-spacing: 1px;
+                        @media ($mediaMd) {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    letter-spacing: .5px;
+                }
+
+                    }
+                }
+            }
+
+            // 右側主圖
+            .BI_main-image {
+                position: relative;
+                width: 850px;
+                height: 500px;
+                transform: translate(-160px, 70px);
+                z-index: 2;
+                @media ($mediaMd) {
+                    transform: translate(0,0);
+                    width: 80vw;
+                    height: 500px;
+                    order: 1;
+                }
+
+
+                img {
+                    width: clamp(650px,calc(35.71vw + 164.29px),850px);
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    @media ($mediaMd) {
+                    width: 80vw;
+                    height: 500px;
+                }
+
+                }
+
+                // 角落裝飾元素
+                .BI_corner-accent {
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    z-index: 3;
+                    @media ($mediaMd) {
+                    display: none;
+                }
+
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: contain;
+                    }
+
+                    &.BI_corner-bottom-left {
+                        bottom: 0;
+                        left: 0;
+                        transform: translate(-40px, 40px);
+                    }
+                }
+            }
+        }
+    }
+
+    // 推薦酒吧區域
+    .BI_recommended-section {
+        width: 100%;
+        max-width: 1440px;
+        margin: 60px auto 0;
+        padding-right: 30px;
+        z-index: 10;
+
+        .BI_recommended-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-left: clamp(50px,calc(-27.08vw + 570px),180px);
+            padding-right: clamp(30px,calc(14.58vw - 180px),100px);
+            z-index: 20;
+
+            // 導航按鈕
+            .BI_nav-btn {
+                flex: 0 0 60px;
+                width: 60px;
+                height: 60px;
+                background: rgba(0, 0, 0, 0.8);
+                border: none;
+                color: $pri-white;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                z-index: 30;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.9);
+                    transform: scale(1.05);
+                }
+            }
+
+            .BI_corner-accent {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                z-index: 3;
+                @media ($mediaMd) {
+                    display: none;
+                }
+
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: contain;
+                }
+
+                &.BI_corner-top-left {
+                    transform: translate(50px, -140px);
+                }
+            }
+
+            // 推薦酒吧圖片容器
+            .BI_recommended-images {
+                flex: 1;
+                display: flex;
+                gap: 30px;
+                overflow: hidden;
+                position: relative;
+                transition: transform 0.3s ease;
+                z-index: 25;
+
+                .BI_recommended-item {
+                    flex: 0 0 calc(50% - 15px);
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    transform: scale(0.95);
+                    height: 300px;
+                    width: 500px;
+
+                    &.active {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    &.next {
+                        opacity: 1;
+                        transform: scale(0.98);
+                    }
+
+                    &:hover {
+                        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+                        transform: translateY(-2px) scale(1);
+
+                        .BI_recommended-image img {
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .BI_recommended-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 25;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.3s ease;
+                        }
+
+                        // 圖片上的資訊覆蓋層
+                        .BI_image-overlay {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            padding: 20px;
+                            z-index: 30;
+                            color: $pri-white;
+
+                            .BI_overlay-name {
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                margin-bottom: 8px;
+                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            }
+
+                            .BI_overlay-station {
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                                opacity: 0.9;
+                                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                            }
+
+                            .BI_overlay-desc {
+                                font-size: 12px;
+                                line-height: 1.4;
+                                opacity: 0.8;
+                                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 返回按鈕
+    .BI_back-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .BI_back-button {
+            background: $pri-dark;
+            color: $pri-white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: $pri-dark;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+// 動畫效果
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
