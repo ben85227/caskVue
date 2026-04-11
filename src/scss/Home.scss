@@ -62,7 +62,7 @@
             bottom: 0;
             width: 50%;
             height: 50%;
-            background: url(/images/gptindexbg2_op1.png);
+            background-image: url(/images/gptindexbg2_op1.png);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -172,7 +172,7 @@
                         position: absolute;
                         left: 100%;
                         top: 0;
-                        transform: translate(clamp(-190px, calc(-15.28vw + 13.19px), -135px), 15px);
+                        transform: translate(clamp(-230px, calc(-15.28vw + 13.19px), -180px), 15px);
                         white-space: nowrap;
                         font-size: clamp(20px, 2.4vw, 32px);
                         letter-spacing: 1em;
@@ -538,7 +538,7 @@
             flex-direction: column;
             margin-top: clamp(40px, calc(-6.90vw + 172.41px), 80px);
             margin-left: clamp(20px, calc(25.86vw - 346.55px), 150px);
-            justify-content: center;
+            justify-content: space-around;
 
             /* ===== 右：列表 ===== */
             .newsList {

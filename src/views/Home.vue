@@ -13,9 +13,9 @@ const IlluData = {
     en: 'Base Spirit',
     desc: '「六大基酒是文化的基礎，麥芽與橡木、杜松與草本、甘蔗與果香...，從原料到工藝，乘載著各式風味的可能性，體驗飲酒文化就從基酒開始。」',
     imgs: [
-      { src: `${baseUrl}images//newvodka.png`, alt: '伏特加' },
-      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
-      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
+      { src: 'images/newvodka.png', alt: '伏特加' },
+      { src: 'images/index-gin.png', alt: '琴酒' },
+      { src: 'images/Subtract.png', alt: '威士忌' },
     ],
   },
   classic: {
@@ -23,9 +23,9 @@ const IlluData = {
     en: 'Classic Cocktail',
     desc: '「經典雞尾酒是時代的縮影，苦艾與琴酒、蘭姆與果汁、威士忌與苦精...，從比例到平衡，凝聚著歷史的記憶與美感，探索調酒文化就從經典開始。」',
     imgs: [
-      { src: `${baseUrl}images/newvodka.png`, alt: '伏特加' },
-      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
-      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
+      { src: 'images/index-daiquiri.png', alt: '戴綺麗' },
+      { src: 'images/index-negroni.png', alt: '尼格羅尼' },
+      { src: 'images/index-sidecar.png', alt: '邊車' },
     ],
   },
   popular: {
@@ -33,20 +33,20 @@ const IlluData = {
     en: 'Popular Cocktail',
     desc: '「大眾調酒是日常的陪伴，啤酒與汽水、伏特加與果茶、清酒與果汁...，從輕鬆到歡聚，蘊藏著親切熟悉的味道與氛圍，享受飲酒文化就從大眾開始。」',
     imgs: [
-      { src: `${baseUrl}images/newvodka.png`, alt: '伏特加' },
-      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
-      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
+      { src: 'images/index-cosmopolitan.png', alt: '柯夢波丹' },
+      { src: 'images/index-longisland.png', alt: '長島冰茶' },
+      { src: 'images/index-tequilasunrise.png', alt: '龍舌蘭日出' },
     ],
   },
 }
 
 // 新聞數據
 const newsData = [
-  { id: 1, title: '【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY', image: `${baseUrl}images/newsPoster1.jpg` },
-  { id: 2, title: '【金曲佳釀】｜爵士及品酒之夜｜經典調酒配上爵士金曲', image: `${baseUrl}images/newsPoster2.jpg` },
-  { id: 3, title: '【茶酒特調】｜自己泡茶酒｜莓果白蘭地專題', image: `${baseUrl}images/newsPoster3.jpg` },
-  { id: 4, title: '【節慶專屬】｜中秋微醺提案－文旦柚子｜雙人體驗方案', image: `${baseUrl}images/newsPoster4.jpg` },
-  { id: 5, title: '【動手體驗】｜Mojito專題-沁涼一夏｜雙人體驗方案', image: `${baseUrl}images/newsPoster5.jpg` },
+  { id: 1, title: '【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY', image: 'images/newsPoster1.jpg' },
+  { id: 2, title: '【金曲佳釀】｜爵士及品酒之夜｜經典調酒配上爵士金曲', image: 'images/newsPoster2.jpg' },
+  { id: 3, title: '【茶酒特調】｜自己泡茶酒｜莓果白蘭地專題', image: 'images/newsPoster3.jpg' },
+  { id: 4, title: '【節慶專屬】｜中秋微醺提案－文旦柚子｜雙人體驗方案', image: 'images/newsPoster4.jpg' },
+  { id: 5, title: '【動手體驗】｜Mojito專題-沁涼一夏｜雙人體驗方案', image: 'images/newsPoster5.jpg' },
 ]
 
 // 輪播狀態
@@ -177,27 +177,27 @@ const onPick = (key) => { tab.value = key }
     <section class="route">
       <h2 class="routeTitle">酒精路跑路線</h2>
       <div class="routeCards">
-        <a class="routeCard1" href="#">
+        <RouterLink class="routeCard1" to="/BarRoute/1">
           <img src="/images/route1.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 1</span>
             <h3 class="title">善導寺微醺漫步</h3>
           </div>
-        </a>
-        <a class="routeCard2" href="#">
+        </RouterLink>
+        <RouterLink class="routeCard2" to="/BarRoute/2">
           <img src="/images/route2.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 2</span>
             <h3 class="title">中山站醉意市集</h3>
           </div>
-        </a>
-        <a class="routeCard3" href="#">
+        </RouterLink>
+        <RouterLink class="routeCard3" to="/BarRoute/3">
           <img src="/images/route3.jpg" alt="" />
           <div class="info">
             <span class="num">推薦路線 3</span>
             <h3 class="title">信義奢華浪漫之旅</h3>
           </div>
-        </a>
+        </RouterLink>
       </div>
     </section>
 
