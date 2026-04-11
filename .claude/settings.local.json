@@ -17,7 +17,9 @@
       "Bash(python3 -)",
       "Bash(py --version)",
       "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/assets/index-CjrKyti7.css\" -o \"C:/Users/User/AppData/Local/Temp/react_index.css\")",
-      "Bash(xargs grep:*)"
+      "Bash(xargs grep:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

@@ -379,13 +379,18 @@
                 text-orientation: upright;
                 font-size: 50px;
                 letter-spacing: .18em;
-                font-family: $family-tc;
+                font-family: "Noto Serif TC", serif;
                 flex-shrink: 0;
                 // width: 150px;
                 display: flex;
                 align-self: flex-end;
                 justify-content: flex-end;
                 padding: 50px 50px 0 0;
+
+                h2 {
+                    font-weight: 700;
+                }
+
                 // margin-left: clamp(20px, calc(31.03vw - 395.86px), 200px);
                 // margin-bottom: clamp(-20px, -11.21vw + 195.17px, 45px);
 
@@ -1564,10 +1569,11 @@
         .Illustrations-body {
             padding: 0;
             z-index: 1;
+
             @media (max-width:1320px) {
                 display: flex;
                 justify-content: center;
-                }
+            }
 
             .Illustrations-introduce {
                 margin: 50px 90px 0 90px;
