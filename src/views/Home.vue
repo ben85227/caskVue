@@ -4,6 +4,8 @@ import { RouterLink } from 'vue-router'
 import MapCarousel from '../components/MapCarousel.vue'
 import '../scss/Home.scss'
 
+const baseUrl = import.meta.env.BASE_URL
+
 // 圖鑑區資料
 const IlluData = {
   base: {
@@ -11,9 +13,9 @@ const IlluData = {
     en: 'Base Spirit',
     desc: '「六大基酒是文化的基礎，麥芽與橡木、杜松與草本、甘蔗與果香...，從原料到工藝，乘載著各式風味的可能性，體驗飲酒文化就從基酒開始。」',
     imgs: [
-      { src: 'images/newvodka.png', alt: '伏特加' },
-      { src: 'images/image17.png', alt: '威士忌' },
-      { src: 'images/Subtract.png', alt: '琴酒' },
+      { src: `${baseUrl}images//newvodka.png`, alt: '伏特加' },
+      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
+      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
     ],
   },
   classic: {
@@ -21,9 +23,9 @@ const IlluData = {
     en: 'Classic Cocktail',
     desc: '「經典雞尾酒是時代的縮影，苦艾與琴酒、蘭姆與果汁、威士忌與苦精...，從比例到平衡，凝聚著歷史的記憶與美感，探索調酒文化就從經典開始。」',
     imgs: [
-      { src: 'images/newvodka.png', alt: '伏特加' },
-      { src: 'images/image17.png', alt: '威士忌' },
-      { src: 'images/Subtract.png', alt: '琴酒' },
+      { src: `${baseUrl}images/newvodka.png`, alt: '伏特加' },
+      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
+      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
     ],
   },
   popular: {
@@ -31,20 +33,20 @@ const IlluData = {
     en: 'Popular Cocktail',
     desc: '「大眾調酒是日常的陪伴，啤酒與汽水、伏特加與果茶、清酒與果汁...，從輕鬆到歡聚，蘊藏著親切熟悉的味道與氛圍，享受飲酒文化就從大眾開始。」',
     imgs: [
-      { src: 'images/newvodka.png', alt: '伏特加' },
-      { src: 'images/image17.png', alt: '威士忌' },
-      { src: 'images/Subtract.png', alt: '琴酒' },
+      { src: `${baseUrl}images/newvodka.png`, alt: '伏特加' },
+      { src: `${baseUrl}images/image17.png`, alt: '威士忌' },
+      { src: `${baseUrl}images/Subtract.png`, alt: '琴酒' },
     ],
   },
 }
 
 // 新聞數據
 const newsData = [
-  { id: 1, title: '【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY', image: 'images/newsPoster1.jpg' },
-  { id: 2, title: '【金曲佳釀】｜爵士及品酒之夜｜經典調酒配上爵士金曲', image: 'images/newsPoster2.jpg' },
-  { id: 3, title: '【茶酒特調】｜自己泡茶酒｜莓果白蘭地專題', image: 'images/newsPoster3.jpg' },
-  { id: 4, title: '【節慶專屬】｜中秋微醺提案－文旦柚子｜雙人體驗方案', image: 'images/newsPoster4.jpg' },
-  { id: 5, title: '【動手體驗】｜Mojito專題-沁涼一夏｜雙人體驗方案', image: 'images/newsPoster5.jpg' },
+  { id: 1, title: '【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY', image: `${baseUrl}images/newsPoster1.jpg` },
+  { id: 2, title: '【金曲佳釀】｜爵士及品酒之夜｜經典調酒配上爵士金曲', image: `${baseUrl}images/newsPoster2.jpg` },
+  { id: 3, title: '【茶酒特調】｜自己泡茶酒｜莓果白蘭地專題', image: `${baseUrl}images/newsPoster3.jpg` },
+  { id: 4, title: '【節慶專屬】｜中秋微醺提案－文旦柚子｜雙人體驗方案', image: `${baseUrl}images/newsPoster4.jpg` },
+  { id: 5, title: '【動手體驗】｜Mojito專題-沁涼一夏｜雙人體驗方案', image: `${baseUrl}images/newsPoster5.jpg` },
 ]
 
 // 輪播狀態

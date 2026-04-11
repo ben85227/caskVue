@@ -5,16 +5,16 @@ import { RouterLink } from 'vue-router'
 const base = import.meta.env.BASE_URL
 
 const bars = [
-  { id: 1,  mrt: '中山站',        title: 'Draft Land',      img: '${base}images/barCard1.png' },
-  { id: 2,  mrt: '忠孝復興站',    title: 'Bar Mood',        img: '${base}images/barCard2.png' },
-  { id: 3,  mrt: '台北小巨蛋',    title: 'The Whisky Bar',  img: '${base}images/barCard3.png' },
-  { id: 4,  mrt: '忠孝敦化站',    title: 'Mixology',        img: '${base}images/barCard4.png' },
-  { id: 5,  mrt: '台北101/世貿站', title: 'Rooftop 101',    img: '${base}images/barCard5.png' },
-  { id: 6,  mrt: '中山國小站',    title: 'Speakeasy',       img: '${base}images/barCard6.png' },
-  { id: 7,  mrt: '國父紀念館站',  title: 'The Gin Room',    img: '${base}images/barCard7.png' },
-  { id: 8,  mrt: '南京三民站',    title: 'Jazz Corner',     img: '${base}images/barCard8.png' },
-  { id: 9,  mrt: '南港展覽館站',  title: 'Craft & Draft',   img: '${base}images/barCard9.png' },
-  { id: 10, mrt: '淡水站',        title: 'Sunset Lounge',   img: '${base}images/barCard10.png' },
+  { id: 1,  mrt: '中山站',        title: 'Draft Land',      img: `${base}images/barCard1.png` },
+  { id: 2,  mrt: '忠孝復興站',    title: 'Bar Mood',        img: `${base}images/barCard2.png` },
+  { id: 3,  mrt: '台北小巨蛋',    title: 'The Whisky Bar',  img: `${base}images/barCard3.png` },
+  { id: 4,  mrt: '忠孝敦化站',    title: 'Mixology',        img: `${base}images/barCard4.png` },
+  { id: 5,  mrt: '台北101/世貿站', title: 'Rooftop 101',    img: `${base}images/barCard5.png` },
+  { id: 6,  mrt: '中山國小站',    title: 'Speakeasy',       img: `${base}images/barCard6.png` },
+  { id: 7,  mrt: '國父紀念館站',  title: 'The Gin Room',    img: `${base}images/barCard7.png` },
+  { id: 8,  mrt: '南京三民站',    title: 'Jazz Corner',     img: `${base}images/barCard8.png` },
+  { id: 9,  mrt: '南港展覽館站',  title: 'Craft & Draft',   img: `${base}images/barCard9.png` },
+  { id: 10, mrt: '淡水站',        title: 'Sunset Lounge',   img: `${base}images/barCard10.png` },
 ]
 
 const count      = bars.length
