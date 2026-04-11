@@ -119,6 +119,7 @@
                 .Ian_aboutText1 {
                     align-self: center;
                     font-size: 32px;
+                    letter-spacing: 2px;
                     padding-left: 5vw;
                     padding-top: 3vh;
                     padding-bottom: 3vh;
@@ -207,6 +208,7 @@
 
             h2 {
                 font-weight: bold;
+                letter-spacing: 10px;
             }
         }
     }
@@ -245,6 +247,10 @@
             display: flex;
             justify-content: center;
             flex: 1;
+
+            h2 {
+                letter-spacing: 2px;
+            }
         }
 
         .Ian_storyDecorateBox2 {

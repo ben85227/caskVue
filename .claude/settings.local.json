@@ -6,7 +6,18 @@
       "Bash(grep -v \"//\")",
       "Bash(sed -i 's|src=\"images/|src=\"/images/|g' /c/Users/User/Desktop/前端/project/caskVue/src/views/Home.vue /c/Users/User/Desktop/前端/project/caskVue/src/views/About.vue)",
       "Bash(sed -i 's|`images/barListCard|`/images/barListCard|g' /c/Users/User/Desktop/前端/project/caskVue/src/components/BarCard.vue)",
-      "Bash(npx vite:*)"
+      "Bash(npx vite:*)",
+      "WebFetch(domain:casktheory999.github.io)",
+      "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/\")",
+      "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/assets/index-CjrKyti7.css\")",
+      "Bash(python3 -c ':*)",
+      "Bash(node -e ':*)",
+      "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/assets/index-CjrKyti7.css\" -o /tmp/react_index.css)",
+      "Read(//tmp/**)",
+      "Bash(python3 -)",
+      "Bash(py --version)",
+      "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/assets/index-CjrKyti7.css\" -o \"C:/Users/User/AppData/Local/Temp/react_index.css\")",
+      "Bash(xargs grep:*)"
     ]
   }
 }

@@ -7,7 +7,7 @@ import '../scss/Home.scss'
 // 圖鑑區資料
 const IlluData = {
   base: {
-    zh: '六大基酒',
+    zh: '基酒',
     en: 'Base Spirit',
     desc: '「六大基酒是文化的基礎，麥芽與橡木、杜松與草本、甘蔗與果香...，從原料到工藝，乘載著各式風味的可能性，體驗飲酒文化就從基酒開始。」',
     imgs: [
@@ -208,7 +208,7 @@ const onPick = (key) => { tab.value = key }
       <div class="Illustrations-nav">
         <h2>酒精圖鑑</h2>
         <div class="navBtn">
-          <button :class="{ active: tab === 'base' }" @click="onPick('base')">六大基酒</button>
+          <button :class="{ active: tab === 'base' }" @click="onPick('base')">基酒</button>
           <button :class="{ active: tab === 'classic' }" @click="onPick('classic')">經典調酒</button>
           <button :class="{ active: tab === 'popular' }" @click="onPick('popular')">大眾調酒</button>
         </div>

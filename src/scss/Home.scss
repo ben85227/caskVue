@@ -175,7 +175,7 @@
                         transform: translate(clamp(-190px, calc(-15.28vw + 13.19px), -135px), 15px);
                         white-space: nowrap;
                         font-size: clamp(20px, 2.4vw, 32px);
-                        letter-spacing: .5em;
+                        letter-spacing: 1em;
                         font-weight: 600;
                         margin: 0;
                         opacity: .95;
@@ -305,7 +305,7 @@
                 margin: 0 auto;
                 font-size: clamp(20px, 2.4vw, 32px);
                 line-height: 1.6;
-                letter-spacing: .02em;
+                letter-spacing: 10px;
                 opacity: .95;
                 font-family: $family-tc;
                 font-weight: bold;

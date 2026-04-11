@@ -13,11 +13,14 @@
     padding: 10px 30px;
     background-color: $pri-dark;
     color: $pri-white;
+    font-family: $family-tc;
+    letter-spacing: 2px;
 
 
 
     .logo {
         font-size: 24px;
+        letter-spacing: 5px;
 
         a {
             font-weight: 500;
