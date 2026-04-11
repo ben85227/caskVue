@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import '../scss/BarCard.scss'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const props = defineProps({
   bar:      { type: Object,  required: true },
   cardType: { type: String,  default: 'square' },
@@ -18,7 +20,7 @@ const badgeConfig = computed(() => {
 <template>
   <RouterLink :to="`/bar/${bar.id}`" :class="`bar-card ${cardType}`">
     <div class="img-box">
-      <img :src="`/images/barListCard${bar.id}.png`" :alt="bar.name" />
+      <img :src="`${baseUrl}images/barListCard${bar.id}.png`" :alt="bar.name" />
       <div v-if="badgeConfig" :class="`badge ${badgeConfig.className}`">
         {{ badgeConfig.text }}
       </div>

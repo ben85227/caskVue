@@ -762,6 +762,7 @@
                 letter-spacing: .01em;
                 color: rgba(0, 0, 0, .04);
                 transform: translate(-20px, clamp(-80px, calc(10.34vw - 218.62px), -20px));
+                pointer-events: none;
 
                 // 手機版隱藏
                 @media (max-width:1340px) {
