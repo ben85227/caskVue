@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 import '../scss/cbarway.scss'
 
 const routesData = [
@@ -35,7 +36,9 @@ const routesData = [
   },
 ]
 
-const idx   = ref(0)
+const routeParam = useRoute()
+const initialId = parseInt(routeParam.params.id) || 1
+const idx   = ref(Math.min(Math.max(initialId - 1, 0), routesData.length - 1))
 const route = computed(() => routesData[idx.value])
 
 const goNext = () => { idx.value = (idx.value + 1) % routesData.length }

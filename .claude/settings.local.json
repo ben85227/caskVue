@@ -19,7 +19,13 @@
       "Bash(curl -s \"https://casktheory999.github.io/casktheoryPrj/assets/index-CjrKyti7.css\" -o \"C:/Users/User/AppData/Local/Temp/react_index.css\")",
       "Bash(xargs grep:*)",
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|jpeg\\)$\")",
+      "Read(//c/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/public/**)",
+      "Read(//c/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/**)",
+      "Read(//c/Users/User/Desktop/前端/project/casktheoryPrj/**)",
+      "Bash(dir \"C:\\\\Users\\\\User\\\\Desktop\\\\前端\\\\project\" /b)",
+      "Bash(dir \"C:\\\\Users\\\\User\\\\Desktop\\\\前端\" /b)"
     ]
   }
 }

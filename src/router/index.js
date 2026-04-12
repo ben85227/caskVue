@@ -7,7 +7,8 @@ const routes = [
   { path: '/Illustrations',   name: 'illustrations',   component: () => import('../views/Illustrations.vue') },
   { path: '/Bar',             name: 'bar',             component: () => import('../views/Bar.vue') },
   { path: '/bar/:id',         name: 'barInner',        component: () => import('../views/BarInnerPage.vue') },
-  { path: '/BarRoute',        name: 'barRoute',        component: () => import('../views/BarRoute.vue') },
+  { path: '/BarRoute',         name: 'barRoute',        component: () => import('../views/BarRoute.vue') },
+  { path: '/BarRoute/:id',    name: 'barRouteId',      component: () => import('../views/BarRoute.vue') },
   { path: '/About',           name: 'about',           component: () => import('../views/About.vue') },
 ]
 
