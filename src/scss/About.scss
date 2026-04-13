@@ -84,7 +84,7 @@
                     font-size: 60px;
                     font-weight: bold;
                     font-family: $family-en;
-                    
+
                 }
             }
 
@@ -119,14 +119,15 @@
                 .Ian_aboutText1 {
                     align-self: center;
                     font-size: 32px;
-                    letter-spacing: 2px;
                     padding-left: 5vw;
                     padding-top: 3vh;
                     padding-bottom: 3vh;
+                    letter-spacing: 2px;
+
 
                     @media ($mediaSm) {
                         font-size: 24px;
-                        
+
                     }
                 }
             }
@@ -183,7 +184,7 @@
                 content: "";
                 position: absolute;
                 background-color: $sec-peggy;
-                opacity: 0.2;
+                opacity: 0.5;
                 left: 5vw;
                 top: -5vh;
                 width: 100%;
@@ -241,7 +242,6 @@
             text-align: center;
             font-size: 32px;
             font-family: $family-tc;
-            font-weight: bold;
             padding-bottom: 3vh;
             border-bottom: 2px solid $pri-dark;
             display: flex;
@@ -249,8 +249,10 @@
             flex: 1;
 
             h2 {
+                font-weight: bold;
                 letter-spacing: 2px;
             }
+
         }
 
         .Ian_storyDecorateBox2 {
@@ -280,7 +282,7 @@
             content: "";
             position: absolute;
             background-color: $sec-peggy;
-            opacity: 0.2;
+            opacity: 0.5;
             left: 5vw;
             top: 15vh;
             width: calc(100% - 5vw);
@@ -296,7 +298,7 @@
         .Ian_storyPhoto {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            // flex-wrap: wrap 2;
             width: 100%;
             gap: 20px;
 

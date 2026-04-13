@@ -62,7 +62,7 @@
             bottom: 0;
             width: 50%;
             height: 50%;
-            background-image: url(/images/gptindexbg2_op1.png);
+            background-image: url("../assets/gptindexbg2_op1.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -305,11 +305,11 @@
                 margin: 0 auto;
                 font-size: clamp(20px, 2.4vw, 32px);
                 line-height: 1.6;
-                letter-spacing: 10px;
                 opacity: .95;
                 font-family: $family-tc;
                 font-weight: bold;
                 text-align: center;
+                letter-spacing: 10px;
 
                 // 平板版
                 @media ($mediaMd) {
@@ -379,20 +379,19 @@
                 text-orientation: upright;
                 font-size: 50px;
                 letter-spacing: .18em;
-                font-family: "Noto Serif TC", serif;
+                font-family: $family-tc;
                 flex-shrink: 0;
                 // width: 150px;
                 display: flex;
                 align-self: flex-end;
                 justify-content: flex-end;
                 padding: 50px 50px 0 0;
-
-                h2 {
-                    font-weight: 700;
-                }
-
                 // margin-left: clamp(20px, calc(31.03vw - 395.86px), 200px);
                 // margin-bottom: clamp(-20px, -11.21vw + 195.17px, 45px);
+
+                h2 {
+                    font-weight: bold;
+                }
 
                 @media (max-width:1340px) {
                     margin: 0;
@@ -730,6 +729,7 @@
                     font-weight: 500;
                     font-size: 20px;
                     margin-right: clamp(0px, calc(-50vw + 525px), 40px);
+                    z-index: 99;
 
                     @media ($mediaMd) {
                         align-self: center;
@@ -762,7 +762,6 @@
                 letter-spacing: .01em;
                 color: rgba(0, 0, 0, .04);
                 transform: translate(-20px, clamp(-80px, calc(10.34vw - 218.62px), -20px));
-                pointer-events: none;
 
                 // 手機版隱藏
                 @media (max-width:1340px) {
@@ -1657,6 +1656,8 @@
                 .cardRow {
                     margin-top: 20px;
                     display: flex;
+                    height: 220px;
+                    width: auto;
                     justify-content: space-evenly;
 
                     @media ($mediaSm) {
@@ -1674,12 +1675,12 @@
                         object-fit: cover;
 
                         @media (max-width:1320px) {
-                            width: 120px;
+                            width: auto;
                             height: 140px;
                         }
 
                         @media ($mediaSm) {
-                            width: 80px;
+                            width: auto;
                             height: 80px;
                         }
                     }

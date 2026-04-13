@@ -177,8 +177,9 @@
 
             span {
                 font-size: 18px;
-                font-family: $family-tc;
+                font-weight: bold;
                 letter-spacing: 2px;
+                font-family: $family-tc;
             }
 
             @media ($mediaSm) {

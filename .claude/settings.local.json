@@ -25,7 +25,12 @@
       "Read(//c/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/**)",
       "Read(//c/Users/User/Desktop/前端/project/casktheoryPrj/**)",
       "Bash(dir \"C:\\\\Users\\\\User\\\\Desktop\\\\前端\\\\project\" /b)",
-      "Bash(dir \"C:\\\\Users\\\\User\\\\Desktop\\\\前端\" /b)"
+      "Bash(dir \"C:\\\\Users\\\\User\\\\Desktop\\\\前端\" /b)",
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/Home.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/Home.scss)",
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/Bar.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/Bar.scss)",
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/BarCard.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/BarCard.scss)",
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/BarInnerPage.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/BarInnerPage.scss)",
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/About.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/About.scss)"
     ]
   }
 }
