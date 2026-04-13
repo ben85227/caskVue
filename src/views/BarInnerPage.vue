@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
+const base = import.meta.env.BASE_URL
 import { useRoute, useRouter } from 'vue-router'
 import { allBars } from '../data/barData.js'
 import '../scss/BarInnerPage.scss'
@@ -67,11 +68,11 @@ const displayBars = computed(() => {
         <!-- 右側主圖 -->
         <div class="BI_main-image">
           <img
-            :src="currentBar.images?.[0] || '/images/bar-placeholder.png'"
+            :src="currentBar.images?.[0] || `${base}images/barListCard1.png`"
             :alt="currentBar.name"
           />
           <div class="BI_corner-accent BI_corner-bottom-left">
-            <img src="/images/BI_corner-bottom-left.png" alt="L形裝飾" />
+            <img :src="`${base}images/BI_corner-bottom-left.png`" alt="L形裝飾" />
           </div>
         </div>
       </div>
@@ -81,11 +82,11 @@ const displayBars = computed(() => {
     <section class="BI_recommended-section">
       <div class="BI_recommended-container">
         <button class="BI_nav-btn" @click="handlePrevImage">
-          <img src="/images/barInnerPage-left-arrow.png" alt="左側切換按鈕" />
+          <img :src="`${base}images/barInnerPage-left-arrow.png`" alt="左側切換按鈕" />
         </button>
 
         <div class="BI_corner-accent BI_corner-top-left">
-          <img src="/images/BI_corner-top-left.png" alt="L形裝飾" />
+          <img :src="`${base}images/BI_corner-top-left.png`" alt="L形裝飾" />
         </div>
 
         <div class="BI_recommended-images">
@@ -97,7 +98,7 @@ const displayBars = computed(() => {
           >
             <div class="BI_recommended-image">
               <img
-                :src="bar.images?.[0] || '/images/bar-placeholder.jpg'"
+                :src="bar.images?.[0] || `${base}images/barListCard1.png`"
                 :alt="bar.name"
               />
               <div class="BI_image-overlay">

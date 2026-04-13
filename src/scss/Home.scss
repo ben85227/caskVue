@@ -62,7 +62,7 @@
             bottom: 0;
             width: 50%;
             height: 50%;
-            background-image: url("../assets/gptindexbg2_op1.png");
+            background-image: url(/images/gptindexbg2_op1.png);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -341,7 +341,7 @@
         padding: 90px 0 60px 0;
         background: $pri-white;
         color: $pri-dark;
-        background-image: url(../images/drop_dark.png);
+        background-image: url(/images/drop_dark.png);
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 191px 116px;
@@ -1320,7 +1320,7 @@
         padding: 90px 60px 60px 0;
         overflow: hidden;
         isolation: isolate;
-        background-image: url(../images/drop_dark.png);
+        background-image: url(/images/drop_dark.png);
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 191px 116px;

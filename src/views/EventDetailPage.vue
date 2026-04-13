@@ -2,9 +2,10 @@
 import { RouterLink } from 'vue-router'
 import '../scss/EventDetailPage.scss'
 
-const heroImg = '/images/eventDetailPage_heroBannerImg.png'
-const infoImg1 = '/images/eventDetailPage_infoImg1.png'
-const infoImg2 = '/images/eventDetailPage_infoImg2.png'
+const base = import.meta.env.BASE_URL
+const heroImg = `${base}images/eventDetailPage_heroBannerImg.png`
+const infoImg1 = `${base}images/eventDetailPage_infoImg1.png`
+const infoImg2 = `${base}images/eventDetailPage_infoImg2.png`
 </script>
 
 <template>
@@ -98,7 +99,7 @@ const infoImg2 = '/images/eventDetailPage_infoImg2.png'
       <h2 class="eventDetailRecommendTitle">猜你喜歡...</h2>
       <div class="a_recList">
         <RouterLink to="/EventDetailPage" class="a_recCard">
-          <img class="a_recCardImage" src="/images/eventDetialRec1.png" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
+          <img class="a_recCardImage" :src="`${base}images/eventDetialRec1.png`" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
           <div class="a_recCardBody">
             <p class="a_recCardMeta">2025.09.20(六)17:00-20:00</p>
             <h3 class="a_recCardTitle">【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY</h3>
@@ -113,7 +114,7 @@ const infoImg2 = '/images/eventDetailPage_infoImg2.png'
         </RouterLink>
 
         <RouterLink to="/EventDetailPage" class="a_recCard">
-          <img class="a_recCardImage" src="/images/eventDetialRec2.png" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
+          <img class="a_recCardImage" :src="`${base}images/eventDetialRec2.png`" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
           <div class="a_recCardBody">
             <p class="a_recCardMeta">2025.09.20(六)17:00-20:00</p>
             <h3 class="a_recCardTitle">【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY</h3>
@@ -128,7 +129,7 @@ const infoImg2 = '/images/eventDetailPage_infoImg2.png'
         </RouterLink>
 
         <RouterLink to="/EventDetailPage" class="a_recCard">
-          <img class="a_recCardImage" src="/images/eventDetialRec2.png" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
+          <img class="a_recCardImage" :src="`${base}images/eventDetialRec2.png`" alt="【嚴選活動】｜環遊世界品調酒" loading="lazy" />
           <div class="a_recCardBody">
             <p class="a_recCardMeta">2025.09.20(六)17:00-20:00</p>
             <h3 class="a_recCardTitle">【嚴選活動】｜環遊世界品調酒｜30 杯全球精選雞尾酒 DIY</h3>

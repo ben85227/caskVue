@@ -30,7 +30,10 @@
       "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/Bar.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/Bar.scss)",
       "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/BarCard.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/BarCard.scss)",
       "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/BarInnerPage.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/BarInnerPage.scss)",
-      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/About.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/About.scss)"
+      "Bash(cp C:/Users/User/Desktop/前端/project/casktheoryPrj/casktheoryPrj/src/scss/About.scss C:/Users/User/Desktop/前端/project/caskVue/src/scss/About.scss)",
+      "Bash(sed -i 's|url\\(\"\\\\.\\\\.\\\\/assets\\\\/gptindexbg2_op1\\\\.png\"\\)|url\\(/images/gptindexbg2_op1.png\\)|g' C:/Users/User/Desktop/前端/project/caskVue/src/scss/Home.scss)",
+      "Bash(sed -i 's|url\\(\\\\.\\\\.\\\\/images\\\\/drop_dark\\\\.png\\)|url\\(/images/drop_dark.png\\)|g' C:/Users/User/Desktop/前端/project/caskVue/src/scss/Home.scss)",
+      "Bash(sed -i 's|url\\(\\\\.\\\\.\\\\/images\\\\/drop_dark\\\\.png\\)|url\\(/images/drop_dark.png\\)|g' C:/Users/User/Desktop/前端/project/caskVue/src/scss/BarInnerPage.scss)"
     ]
   }
 }
