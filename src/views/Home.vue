@@ -13,8 +13,8 @@ const IlluData = {
     desc: '「六大基酒是文化的基礎，麥芽與橡木、杜松與草本、甘蔗與果香...，從原料到工藝，乘載著各式風味的可能性，體驗飲酒文化就從基酒開始。」',
     imgs: [
       { src: 'images/newvodka.png', alt: '伏特加' },
-      { src: 'images/Gin.png', alt: '琴酒' },
-      { src: 'images/Whiskey.png', alt: '威士忌' },
+      { src: 'images/index-gin.png', alt: '琴酒' },
+      { src: 'images/Subtract.png', alt: '威士忌' },
     ],
   },
   classic: {
@@ -22,9 +22,9 @@ const IlluData = {
     en: 'Classic Cocktail',
     desc: '「經典雞尾酒是時代的縮影，苦艾與琴酒、蘭姆與果汁、威士忌與苦精...，從比例到平衡，凝聚著歷史的記憶與美感，探索調酒文化就從經典開始。」',
     imgs: [
-      { src: 'images/Daiquiri.png', alt: '戴綺麗' },
-      { src: 'images/Negroni.png', alt: '尼格羅尼' },
-      { src: 'images/Sidecar.png', alt: '邊車' },
+      { src: 'images/index-daiquiri.png', alt: '戴綺麗' },
+      { src: 'images/index-negroni.png', alt: '尼格羅尼' },
+      { src: 'images/index-sidecar.png', alt: '邊車' },
     ],
   },
   popular: {
@@ -32,9 +32,9 @@ const IlluData = {
     en: 'Popular Cocktail',
     desc: '「大眾調酒是日常的陪伴，啤酒與汽水、伏特加與果茶、清酒與果汁...，從輕鬆到歡聚，蘊藏著親切熟悉的味道與氛圍，享受飲酒文化就從大眾開始。」',
     imgs: [
-      { src: 'images/Cosmopolitan.png', alt: '柯夢波丹' },
-      { src: 'images/LongIslandIcedTea.png', alt: '長島冰茶' },
-      { src: 'images/TequilaSunrise.png', alt: '龍舌蘭日出' },
+      { src: 'images/index-cosmopolitan.png', alt: '柯夢波丹' },
+      { src: 'images/index-longisland.png', alt: '長島冰茶' },
+      { src: 'images/index-tequilasunrise.png', alt: '龍舌蘭日出' },
     ],
   },
 }
